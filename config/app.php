@@ -212,4 +212,9 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'line' => [
+        'line_message_channel_token' => env('LINE_MESSAGE_CHANNEL_TOKEN'),
+        'line_message_channel_secret' => env('LINE_MESSAGE_CHANNEL_SECRET'),
+    ]
+
 ];
