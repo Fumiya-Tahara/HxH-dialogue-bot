@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @include('components.head')
 </head>
-<body>
+<body style="height: 100vh;">
     <header>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-primary bg-primary">
         <!-- Navbar content -->
+            <a class="nav-link fs-4" href="">LINE HxH dialogue BOT</a>
         </nav>
     </header>
 
