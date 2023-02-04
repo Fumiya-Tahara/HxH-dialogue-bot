@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CharacterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/character', [CharacterController::class, 'create_character_view']);
+Route::post('/character_post', [CharacterController::class, 'create_character_post'])->name('create.character');
