@@ -1,23 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="d-flex flex-column">
+    <h1 style="text-align: center;">HxH dialogue BOT</h1>
+    <div style="text-align: center;">LINE HxH dialogue BOTの管理者用サイトです。</div>
 </div>
 @endsection
