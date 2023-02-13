@@ -12,6 +12,6 @@
         <label for="system">系統</label>
         <input type="text" name="system" id="system">
     </p>
-    <button type="submit">送信</button>
+    <button type="submit">保存する</button>
 </form>
 @endsection

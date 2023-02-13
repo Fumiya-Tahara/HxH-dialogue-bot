@@ -38,6 +38,11 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function redirectPath()
+    {
+        return '/home';
+    }
+
     public function username(): string
     {
       return 'login_id';

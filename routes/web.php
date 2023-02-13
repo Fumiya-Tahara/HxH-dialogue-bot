@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\DialogueController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ Route::get('/home', function () {
 
 Route::get('/character', [CharacterController::class, 'create_character_view']);
 Route::post('/character_post', [CharacterController::class, 'create_character_post'])->name('create.character');
+
+Route::get('/dialogue', [DialogueController::class, 'create_dialogue_view']);
+Route::post('/dialogue_post', [DialogueController::class, 'create_dialogue_post'])->name('create.dialogue');
 
 Auth::routes();
 

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Dialogue extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'character_id',
+        'dialogue',
+    ];
 }
