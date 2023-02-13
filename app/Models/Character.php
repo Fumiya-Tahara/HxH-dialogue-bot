@@ -16,6 +16,6 @@ class Character extends Model
 
     public function dialogues()
     {
-        return $this->hasMany('App\Model\Dialogue');
+        return $this->hasMany('App\Models\Dialogue');
     }
 }
