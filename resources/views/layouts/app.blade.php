@@ -20,16 +20,23 @@
     <div id="app">
         <nav class="navbar navbar-primary bg-primary shadow-sm">
             <div class="container">
-                <a class="nav-link text-light fs-4" href="" >LINE HxH dialogue BOT</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon text-light" style="border-color: #ffffff"></span>
-                </button>
+                <a class="nav-link text-light fs-4" href="{{ route('top') }}" >LINE HxH dialogue BOT</a>
+                <div class="navbar-nav d-flex flex-row">
+                    <ul class="d-flex my-auto" style="list-style: none;">
+                        <li>
+                            <a class="nav-link text-light me-3" href="{{ route('show.character') }}">キャラクターを作成</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-light me-3" href="{{ route('show.dialogue') }}">セリフを作成</a>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon text-light" style="border-color: #ffffff"></span>
+                    </button>
+                </div>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

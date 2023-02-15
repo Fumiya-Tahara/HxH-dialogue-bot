@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\DialogueController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,19 +16,26 @@ use App\Http\Controllers\DialogueController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return Redirect::to('/top');
 });
 
-Route::get('/home', function () {
-    return view('home');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/top', [HomeController::class, 'index'])->name('top');
+    Route::get('/character', [CharacterController::class, 'create_character_view'])->name('show.character');
+    Route::post('/character_post', [CharacterController::class, 'create_character_post'])->name('create.character');
+    
+    Route::get('/dialogue', [DialogueController::class, 'create_dialogue_view'])->name('show.dialogue');
+    Route::post('/dialogue_post', [DialogueController::class, 'create_dialogue_post'])->name('create.dialogue');
 });
 
-Route::get('/character', [CharacterController::class, 'create_character_view']);
-Route::post('/character_post', [CharacterController::class, 'create_character_post'])->name('create.character');
 
-Route::get('/dialogue', [DialogueController::class, 'create_dialogue_view']);
-Route::post('/dialogue_post', [DialogueController::class, 'create_dialogue_post'])->name('create.dialogue');
+
+
 
 Auth::routes();
 
