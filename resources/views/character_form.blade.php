@@ -5,6 +5,13 @@
     @csrf
 
     <h3 class="mb-5">キャラクターを作成</h3>
+
+    @if (isset($errors))
+    @foreach ($errors->all() as $error)
+    <li class="text-danger" style="list-style:none;">{{$error}}</li>
+    @endforeach
+    @endif
+
     <p>
         <label for="name">名前</label>
         <input class="form-control" type="text" name="name" id="name">

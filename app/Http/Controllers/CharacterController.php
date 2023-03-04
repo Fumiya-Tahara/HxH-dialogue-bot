@@ -14,6 +14,11 @@ class CharacterController extends Controller
 
     public function create_character_post(Request $request)
     {
+        $request->validate([
+            'name' => 'required|unique:characters',
+            'system' => 'required',
+        ]);
+
         $characterName = $request->input('name');
         $system = $request->input('system');
 
